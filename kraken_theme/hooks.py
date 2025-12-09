@@ -24,13 +24,35 @@ app_license = "mit"
 # Includes in <head>
 # ------------------
 
-# include js, css files in header of desk.html
-# app_include_css = "/assets/kraken_theme/css/kraken_theme.css"
-# app_include_js = "/assets/kraken_theme/js/kraken_theme.js"
+# Include dark mode CSS in Desk (backend UI)
+app_include_css = "/assets/kraken_theme/css/kraken_theme.bundle.css"
 
-# include js, css files in header of web template
-# web_include_css = "/assets/kraken_theme/css/kraken_theme.css"
-# web_include_js = "/assets/kraken_theme/js/kraken_theme.js"
+# Include dark mode CSS in website/portal pages
+web_include_css = "/assets/kraken_theme/css/kraken_theme.bundle.css"
+
+# Override ERPNext branding - this overrides website_context from erpnext/hooks.py
+website_context = {
+    "favicon": "/assets/kraken_theme/images/kraken-icon.png",
+    "splash_image": "/assets/kraken_theme/images/kraken-icon.png",
+}
+
+# Override app logo URL (used in loading transitions)
+app_logo_url = "/assets/kraken_theme/images/kraken-icon.png"
+
+# Extend boot info to rebrand ERPNext to Kraken
+extend_bootinfo = "kraken_theme.boot.extend_bootinfo"
+
+# Fixtures - auto-import these DocTypes on migrate
+fixtures = [
+    {"dt": "Website Settings"},
+    {"dt": "Navbar Settings"},
+]
+
+# Installation
+# ------------
+
+after_install = "kraken_theme.install.after_install"
+after_migrate = "kraken_theme.install.after_migrate"
 
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "kraken_theme/public/scss/website"

@@ -1,0 +1,9 @@
+/* Kraken Theme - Hide Theme Switcher Only */
+
+/* Hide theme switcher UI elements */
+.theme-switcher,
+[data-action="toggle-theme"],
+.theme-toggle,
+#theme-switcher {
+  display: none !important;
+}
