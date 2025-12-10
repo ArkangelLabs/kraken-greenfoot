@@ -42,12 +42,6 @@ app_logo_url = "/assets/kraken_theme/images/kraken-icon.png"
 # Extend boot info to rebrand ERPNext to Kraken
 extend_bootinfo = "kraken_theme.boot.extend_bootinfo"
 
-# Fixtures - auto-import these DocTypes on migrate
-fixtures = [
-    {"dt": "Website Settings"},
-    {"dt": "Navbar Settings"},
-]
-
 # Installation
 # ------------
 

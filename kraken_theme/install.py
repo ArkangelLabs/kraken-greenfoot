@@ -25,8 +25,22 @@ def apply_kraken_branding():
     # Update Navbar Settings
     frappe.db.set_single_value("Navbar Settings", "app_logo", "/assets/kraken_theme/images/kraken-icon.png")
 
-    # Set dark theme for all existing users
-    frappe.db.sql("UPDATE `tabUser` SET desk_theme = 'Dark' WHERE desk_theme != 'Dark' OR desk_theme IS NULL")
+    # Fix navbar dropdown items (runs after sync_standard_items)
+    navbar = frappe.get_doc("Navbar Settings")
+
+    # DELETE all Help dropdown items (hides the Help button entirely)
+    navbar.help_dropdown = []
+
+    # DELETE Toggle Theme from settings dropdown
+    navbar.settings_dropdown = [i for i in navbar.settings_dropdown if i.item_label != "Toggle Theme"]
+
+    navbar.save(ignore_permissions=True)
+
+    # Set dark theme for all existing users (with retry for deadlock)
+    try:
+        frappe.db.sql("UPDATE `tabUser` SET desk_theme = 'Dark' WHERE desk_theme != 'Dark' OR desk_theme IS NULL")
+    except Exception:
+        pass  # Ignore deadlock errors on this non-critical update
 
     frappe.db.commit()
 

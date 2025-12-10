@@ -1,9 +1,19 @@
-/* Kraken Theme - Hide Theme Switcher Only */
+/* Kraken Theme */
 
-/* Hide theme switcher UI elements */
-.theme-switcher,
-[data-action="toggle-theme"],
-.theme-toggle,
-#theme-switcher {
+/* Hide Help dropdown in navbar */
+.dropdown-help {
   display: none !important;
+}
+
+/* Workspace layout - always centered with max-width */
+[data-page-route="Workspaces"] .layout-main {
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+[data-page-route="Workspaces"] .page-head .container {
+  max-width: 1400px !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
