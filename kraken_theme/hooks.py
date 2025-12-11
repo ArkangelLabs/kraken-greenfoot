@@ -48,6 +48,19 @@ extend_bootinfo = "kraken_theme.boot.extend_bootinfo"
 after_install = "kraken_theme.install.after_install"
 after_migrate = "kraken_theme.install.after_migrate"
 
+# Fixtures to export/import
+fixtures = [
+    {"dt": "Navbar Settings"},
+    {"dt": "Website Settings"},
+]
+
+# Force dark theme for new users
+doc_events = {
+    "User": {
+        "before_insert": "kraken_theme.install.set_dark_theme_for_new_user"
+    }
+}
+
 # include custom scss in every website theme (without file extension ".scss")
 # website_theme_scss = "kraken_theme/public/scss/website"
 
@@ -75,10 +88,11 @@ after_migrate = "kraken_theme.install.after_migrate"
 # application home page (will override Website Settings)
 # home_page = "login"
 
-# website user home page (by Role)
-# role_home_page = {
-# 	"Role": "home_page"
-# }
+# Redirect users to specific workspace based on role
+# Website Users with Kraken End User role go to portal dashboard
+role_home_page = {
+    "Kraken End User": "/portal/dashboard"
+}
 
 # Generators
 # ----------

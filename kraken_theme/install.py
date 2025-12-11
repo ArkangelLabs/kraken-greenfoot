@@ -46,3 +46,9 @@ def apply_kraken_branding():
 
     # Clear cache so changes take effect
     frappe.clear_cache()
+
+
+def set_dark_theme_for_new_user(doc, method=None):
+    """Set dark theme for newly created users"""
+    if not doc.desk_theme or doc.desk_theme != "Dark":
+        doc.desk_theme = "Dark"
