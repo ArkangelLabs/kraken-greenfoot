@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.eggs/
+dist/
+build/
+
+# Environment
+.env
+.venv/
+env/
+venv/
+
+# Docker
+*.log
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Frappe
+sites/*/private/*
+sites/*/public/files/*
+sites/*/logs/*
+*.pyc
+
+# Backup files
+*.backup
+*.bak
+*.bak2
+*.tmp
+*.tmp.rest
+
+# Data files
+*.json
+!package.json
+!pyproject.toml
+
+# Node
+node_modules/

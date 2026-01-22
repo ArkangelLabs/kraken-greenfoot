@@ -1,0 +1,326 @@
+{% extends "templates/web.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block head_include %}
+<style>
+/* Dark theme for portal dashboard */
+:root {
+    --bg-color: #1a1a2e;
+    --card-bg: #16213e;
+    --text-color: #e8e8e8;
+    --text-muted: #a0a0a0;
+    --border-color: #2a2a4a;
+    --accent-blue: #7cd6fd;
+    --accent-green: #28a745;
+    --accent-yellow: #ffa00a;
+    --accent-red: #ff5858;
+    --accent-purple: #743ee2;
+}
+
+body {
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+}
+
+.web-footer, .navbar {
+    background-color: var(--card-bg) !important;
+    border-color: var(--border-color) !important;
+}
+
+.dealer-dashboard {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 30px 20px;
+}
+
+.dashboard-header {
+    margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+    color: var(--text-color);
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.dashboard-header p {
+    color: var(--text-muted);
+    font-size: 14px;
+    margin: 0;
+}
+
+/* Number Cards */
+.number-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-bottom: 40px;
+}
+
+.number-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.number-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.number-card .card-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--accent-blue);
+    margin-bottom: 8px;
+}
+
+.number-card.pending .card-value {
+    color: var(--accent-yellow);
+}
+
+.number-card.success .card-value {
+    color: var(--accent-green);
+}
+
+.number-card.danger .card-value {
+    color: var(--accent-red);
+}
+
+.number-card .card-label {
+    font-size: 13px;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Charts Grid */
+.charts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 24px;
+}
+
+.chart-container {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    padding: 24px;
+}
+
+.chart-container h3 {
+    color: var(--text-color);
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Chart.js overrides for dark theme */
+.chart-container .frappe-chart .title,
+.chart-container .frappe-chart .legend-dataset-label {
+    fill: var(--text-muted) !important;
+}
+
+.chart-container .frappe-chart .x.axis text,
+.chart-container .frappe-chart .y.axis text {
+    fill: var(--text-muted) !important;
+}
+
+/* Loading state */
+.chart-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    color: var(--text-muted);
+}
+
+/* Logout button */
+.portal-logout {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 13px;
+    transition: background 0.2s;
+}
+
+.portal-logout:hover {
+    background: var(--border-color);
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .dealer-dashboard {
+        padding: 20px 15px;
+    }
+
+    .number-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .number-card .card-value {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .number-cards {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+{% endblock %}
+
+{% block page_content %}
+<a href="/api/method/logout" class="portal-logout">Logout</a>
+
+<div class="dealer-dashboard">
+    <div class="dashboard-header">
+        <h1>{{ title }}</h1>
+        <p>Welcome, {{ user_name }}</p>
+    </div>
+
+    <!-- Number Cards -->
+    <div class="number-cards">
+        <div class="number-card">
+            <div class="card-value">{{ total_equipment }}</div>
+            <div class="card-label">Total Equipment</div>
+        </div>
+        <div class="number-card pending">
+            <div class="card-value">{{ pending_warranties }}</div>
+            <div class="card-label">Pending Warranties</div>
+        </div>
+        <div class="number-card success">
+            <div class="card-value">{{ completed_warranties }}</div>
+            <div class="card-label">Completed</div>
+        </div>
+        <div class="number-card danger">
+            <div class="card-value">{{ failed_warranties }}</div>
+            <div class="card-label">Failed</div>
+        </div>
+    </div>
+
+    <!-- Charts -->
+    <div class="charts-grid">
+        <div class="chart-container">
+            <h3>Monthly Installations</h3>
+            <div id="chart-monthly" class="chart-loading">Loading...</div>
+        </div>
+        <div class="chart-container">
+            <h3>Registrations by Brand</h3>
+            <div id="chart-brand" class="chart-loading">Loading...</div>
+        </div>
+        <div class="chart-container">
+            <h3>Registrations by Province</h3>
+            <div id="chart-province" class="chart-loading">Loading...</div>
+        </div>
+        <div class="chart-container">
+            <h3>Warranty Processing Status</h3>
+            <div id="chart-status" class="chart-loading">Loading...</div>
+        </div>
+    </div>
+</div>
+
+<script>
+frappe.ready(() => {
+    // Monthly Installations - Line Chart
+    frappe.call({
+        method: 'warranties.www.portal.dashboard.get_monthly_installations',
+        callback: (r) => {
+            const el = document.getElementById('chart-monthly');
+            el.classList.remove('chart-loading');
+            el.innerHTML = '';
+            if (r.message && r.message.labels && r.message.labels.length > 0) {
+                new frappe.Chart("#chart-monthly", {
+                    data: r.message,
+                    type: 'line',
+                    height: 280,
+                    lineOptions: { regionFill: 1 },
+                    colors: ['#7cd6fd']
+                });
+            } else {
+                el.innerHTML = '<div style="text-align:center;color:#a0a0a0;padding:100px 0;">No data available</div>';
+            }
+        }
+    });
+
+    // Brand Distribution - Pie Chart
+    frappe.call({
+        method: 'warranties.www.portal.dashboard.get_registrations_by_brand',
+        callback: (r) => {
+            const el = document.getElementById('chart-brand');
+            el.classList.remove('chart-loading');
+            el.innerHTML = '';
+            if (r.message && r.message.labels && r.message.labels.length > 0) {
+                new frappe.Chart("#chart-brand", {
+                    data: r.message,
+                    type: 'pie',
+                    height: 280,
+                    colors: ['#7cd6fd', '#743ee2', '#ff5858', '#ffa00a', '#28a745', '#17a2b8', '#6c757d', '#e83e8c', '#20c997', '#fd7e14']
+                });
+            } else {
+                el.innerHTML = '<div style="text-align:center;color:#a0a0a0;padding:100px 0;">No data available</div>';
+            }
+        }
+    });
+
+    // Province Distribution - Bar Chart
+    frappe.call({
+        method: 'warranties.www.portal.dashboard.get_registrations_by_province',
+        callback: (r) => {
+            const el = document.getElementById('chart-province');
+            el.classList.remove('chart-loading');
+            el.innerHTML = '';
+            if (r.message && r.message.labels && r.message.labels.length > 0) {
+                new frappe.Chart("#chart-province", {
+                    data: r.message,
+                    type: 'bar',
+                    height: 280,
+                    colors: ['#7cd6fd']
+                });
+            } else {
+                el.innerHTML = '<div style="text-align:center;color:#a0a0a0;padding:100px 0;">No data available</div>';
+            }
+        }
+    });
+
+    // Warranty Status - Donut Chart
+    frappe.call({
+        method: 'warranties.www.portal.dashboard.get_warranty_status',
+        callback: (r) => {
+            const el = document.getElementById('chart-status');
+            el.classList.remove('chart-loading');
+            el.innerHTML = '';
+            if (r.message && r.message.labels && r.message.labels.length > 0) {
+                new frappe.Chart("#chart-status", {
+                    data: r.message,
+                    type: 'donut',
+                    height: 280,
+                    colors: ['#ffa00a', '#28a745', '#ff5858']
+                });
+            } else {
+                el.innerHTML = '<div style="text-align:center;color:#a0a0a0;padding:100px 0;">No data available</div>';
+            }
+        }
+    });
+});
+</script>
+{% endblock %}
