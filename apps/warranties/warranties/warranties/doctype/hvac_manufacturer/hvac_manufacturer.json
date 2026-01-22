@@ -1,0 +1,94 @@
+{
+ "actions": [],
+ "autoname": "field:brand",
+ "creation": "2024-12-09 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "brand",
+  "type",
+  "column_break_1",
+  "registration_url",
+  "section_break_fields",
+  "fields_needed",
+  "section_break_guide",
+  "markdown_guide"
+ ],
+ "fields": [
+  {
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Brand",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Type",
+   "options": "\nMini-Split Heat Pump\nCentral Heat Pump\nThermostat\nCoil\nVRF\nMini-Split / VRF (Commercial)\nHeat Pump (No Registration)"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "registration_url",
+   "fieldtype": "Data",
+   "label": "Registration URL",
+   "options": "URL"
+  },
+  {
+   "fieldname": "section_break_fields",
+   "fieldtype": "Section Break",
+   "label": "Required Fields for Registration"
+  },
+  {
+   "fieldname": "fields_needed",
+   "fieldtype": "Table",
+   "label": "Fields Needed",
+   "options": "HVAC Manufacturer Field"
+  },
+  {
+   "fieldname": "section_break_guide",
+   "fieldtype": "Section Break",
+   "label": "Registration Guide"
+  },
+  {
+   "fieldname": "markdown_guide",
+   "fieldtype": "Text Editor",
+   "label": "Markdown Guide"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-09 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Warranties",
+ "name": "HVAC Manufacturer",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "title_field": "brand",
+ "track_changes": 1
+}

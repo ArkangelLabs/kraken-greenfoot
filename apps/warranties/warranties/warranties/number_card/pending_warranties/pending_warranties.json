@@ -1,0 +1,20 @@
+{
+ "creation": "2024-12-09 12:00:00.000000",
+ "docstatus": 0,
+ "doctype": "Number Card",
+ "document_type": "Warranty Registration",
+ "filters_json": "[[\"Warranty Registration\", \"processing_status\", \"=\", \"Pending\"]]",
+ "function": "Count",
+ "idx": 0,
+ "is_public": 1,
+ "is_standard": 1,
+ "label": "Pending Warranties",
+ "modified": "2024-12-09 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Warranties",
+ "name": "Pending Warranties",
+ "owner": "Administrator",
+ "show_percentage_stats": 1,
+ "stats_time_interval": "Weekly",
+ "type": "Document Type"
+}

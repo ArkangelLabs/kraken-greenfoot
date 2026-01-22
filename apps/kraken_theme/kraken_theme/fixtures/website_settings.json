@@ -1,0 +1,10 @@
+[
+  {
+    "doctype": "Website Settings",
+    "name": "Website Settings",
+    "app_name": "Kraken",
+    "favicon": "/assets/kraken_theme/images/kraken-icon.png",
+    "splash_image": "",
+    "footer_powered": "Powered by Kraken"
+  }
+]

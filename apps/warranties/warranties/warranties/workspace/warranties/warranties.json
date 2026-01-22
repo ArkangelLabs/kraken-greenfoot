@@ -1,0 +1,139 @@
+{
+ "charts": [
+  {
+   "chart_name": "Monthly Installations",
+   "label": "Monthly Installations"
+  },
+  {
+   "chart_name": "Registrations by Brand",
+   "label": "Registrations by Brand"
+  },
+  {
+   "chart_name": "Registrations by Province",
+   "label": "Registrations by Province"
+  },
+  {
+   "chart_name": "Warranty Processing Status",
+   "label": "Warranty Processing Status"
+  }
+ ],
+ "content": "[{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Equipment Registrations\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Warranties\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed Warranties\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Failed Warranties\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Monthly Installations\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Registrations by Brand\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Registrations by Province\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Warranty Processing Status\",\"col\":6}}]",
+ "creation": "2024-12-09 12:00:00.000000",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "/assets/kraken_theme/images/kraken-icon.png",
+ "idx": 0,
+ "is_hidden": 0,
+ "label": "Warranties",
+ "links": [
+  {
+   "hidden": 0,
+   "icon": "clipboard",
+   "is_query_report": 0,
+   "label": "Equipment",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "icon": "list",
+   "is_query_report": 0,
+   "label": "Equipment Registration",
+   "link_count": 0,
+   "link_to": "Equipment Registration",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "file",
+   "is_query_report": 0,
+   "label": "Warranty Processing",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "icon": "check",
+   "is_query_report": 0,
+   "label": "Warranty Registration",
+   "link_count": 0,
+   "link_to": "Warranty Registration",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "icon": "list-todo",
+   "is_query_report": 0,
+   "label": "Agent Log",
+   "link_count": 0,
+   "link_to": "Agent Log",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "icon": "setting-gear",
+   "is_query_report": 0,
+   "label": "Configuration",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "icon": "building-2",
+   "is_query_report": 0,
+   "label": "HVAC Manufacturer",
+   "link_count": 0,
+   "link_to": "HVAC Manufacturer",
+   "link_type": "DocType",
+   "onboard": 1,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-12-22 15:30:00.000000",
+ "modified_by": "Administrator",
+ "module": "Warranties",
+ "name": "Warranties",
+ "number_cards": [
+  {
+   "label": "Total Equipment Registrations",
+   "number_card_name": "Total Equipment Registrations"
+  },
+  {
+   "label": "Pending Warranties",
+   "number_card_name": "Pending Warranties"
+  },
+  {
+   "label": "Completed Warranties",
+   "number_card_name": "Completed Warranties"
+  },
+  {
+   "label": "Failed Warranties",
+   "number_card_name": "Failed Warranties"
+  }
+ ],
+ "owner": "Administrator",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "restrict_to_domain": "",
+ "roles": [],
+ "sequence_id": 1.0,
+ "shortcuts": [],
+ "title": "Warranties"
+}

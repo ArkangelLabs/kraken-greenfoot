@@ -1,0 +1,441 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-12-09 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "registering_as",
+  "brand",
+  "processing_status",
+  "column_break_1",
+  "install_date",
+  "purchase_date",
+  "installation_type",
+  "dealer_id",
+  "section_break_primary",
+  "model",
+  "serial",
+  "section_break_additional",
+  "model1",
+  "serial1",
+  "column_break_add1",
+  "model2",
+  "serial2",
+  "section_break_additional2",
+  "model3",
+  "serial3",
+  "column_break_add2",
+  "model4",
+  "serial4",
+  "section_break_additional3",
+  "model5",
+  "serial5",
+  "column_break_add3",
+  "model6",
+  "serial6",
+  "section_break_additional4",
+  "model7",
+  "serial7",
+  "column_break_add4",
+  "model8",
+  "serial8",
+  "section_break_additional5",
+  "model9",
+  "serial9",
+  "section_break_owner",
+  "owner_first_name",
+  "owner_last_name",
+  "owner_email_address",
+  "owner_phone_number",
+  "column_break_owner",
+  "owner_street",
+  "owner_city",
+  "owner_state",
+  "owner_country",
+  "owner_zip_code",
+  "section_break_contractor",
+  "contractor_name",
+  "contractor_email_address",
+  "contractor_phone_number",
+  "column_break_contractor",
+  "contractor_street",
+  "contractor_city",
+  "contractor_state",
+  "contractor_country",
+  "contractor_zipcode",
+  "section_break_result",
+  "pdf_url",
+  "error_message",
+  "processed_at"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "WRG-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "registering_as",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Registering As",
+   "options": "\nContractor\nHomeowner"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Brand",
+   "options": "HVAC Manufacturer"
+  },
+  {
+   "default": "Pending",
+   "fieldname": "processing_status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Processing Status",
+   "options": "Pending\nProcessing\nCompleted\nFailed"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "install_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Install Date"
+  },
+  {
+   "fieldname": "purchase_date",
+   "fieldtype": "Date",
+   "label": "Purchase Date"
+  },
+  {
+   "fieldname": "installation_type",
+   "fieldtype": "Data",
+   "label": "Installation Type"
+  },
+  {
+   "fieldname": "dealer_id",
+   "fieldtype": "Data",
+   "label": "Dealer ID"
+  },
+  {
+   "fieldname": "section_break_primary",
+   "fieldtype": "Section Break",
+   "label": "Primary Unit"
+  },
+  {
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model"
+  },
+  {
+   "fieldname": "serial",
+   "fieldtype": "Data",
+   "label": "Serial"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_additional",
+   "fieldtype": "Section Break",
+   "label": "Additional Units 1-2"
+  },
+  {
+   "fieldname": "model1",
+   "fieldtype": "Data",
+   "label": "Model 1"
+  },
+  {
+   "fieldname": "serial1",
+   "fieldtype": "Data",
+   "label": "Serial 1"
+  },
+  {
+   "fieldname": "column_break_add1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model2",
+   "fieldtype": "Data",
+   "label": "Model 2"
+  },
+  {
+   "fieldname": "serial2",
+   "fieldtype": "Data",
+   "label": "Serial 2"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_additional2",
+   "fieldtype": "Section Break",
+   "label": "Additional Units 3-4"
+  },
+  {
+   "fieldname": "model3",
+   "fieldtype": "Data",
+   "label": "Model 3"
+  },
+  {
+   "fieldname": "serial3",
+   "fieldtype": "Data",
+   "label": "Serial 3"
+  },
+  {
+   "fieldname": "column_break_add2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model4",
+   "fieldtype": "Data",
+   "label": "Model 4"
+  },
+  {
+   "fieldname": "serial4",
+   "fieldtype": "Data",
+   "label": "Serial 4"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_additional3",
+   "fieldtype": "Section Break",
+   "label": "Additional Units 5-6"
+  },
+  {
+   "fieldname": "model5",
+   "fieldtype": "Data",
+   "label": "Model 5"
+  },
+  {
+   "fieldname": "serial5",
+   "fieldtype": "Data",
+   "label": "Serial 5"
+  },
+  {
+   "fieldname": "column_break_add3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model6",
+   "fieldtype": "Data",
+   "label": "Model 6"
+  },
+  {
+   "fieldname": "serial6",
+   "fieldtype": "Data",
+   "label": "Serial 6"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_additional4",
+   "fieldtype": "Section Break",
+   "label": "Additional Units 7-8"
+  },
+  {
+   "fieldname": "model7",
+   "fieldtype": "Data",
+   "label": "Model 7"
+  },
+  {
+   "fieldname": "serial7",
+   "fieldtype": "Data",
+   "label": "Serial 7"
+  },
+  {
+   "fieldname": "column_break_add4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "model8",
+   "fieldtype": "Data",
+   "label": "Model 8"
+  },
+  {
+   "fieldname": "serial8",
+   "fieldtype": "Data",
+   "label": "Serial 8"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_additional5",
+   "fieldtype": "Section Break",
+   "label": "Additional Unit 9"
+  },
+  {
+   "fieldname": "model9",
+   "fieldtype": "Data",
+   "label": "Model 9"
+  },
+  {
+   "fieldname": "serial9",
+   "fieldtype": "Data",
+   "label": "Serial 9"
+  },
+  {
+   "fieldname": "section_break_owner",
+   "fieldtype": "Section Break",
+   "label": "Owner Information"
+  },
+  {
+   "fieldname": "owner_first_name",
+   "fieldtype": "Data",
+   "label": "Owner First Name"
+  },
+  {
+   "fieldname": "owner_last_name",
+   "fieldtype": "Data",
+   "label": "Owner Last Name"
+  },
+  {
+   "fieldname": "owner_email_address",
+   "fieldtype": "Data",
+   "label": "Owner Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "owner_phone_number",
+   "fieldtype": "Data",
+   "label": "Owner Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_owner",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "owner_street",
+   "fieldtype": "Data",
+   "label": "Owner Street"
+  },
+  {
+   "fieldname": "owner_city",
+   "fieldtype": "Data",
+   "label": "Owner City"
+  },
+  {
+   "fieldname": "owner_state",
+   "fieldtype": "Data",
+   "label": "Owner State/Province"
+  },
+  {
+   "fieldname": "owner_country",
+   "fieldtype": "Data",
+   "label": "Owner Country"
+  },
+  {
+   "fieldname": "owner_zip_code",
+   "fieldtype": "Data",
+   "label": "Owner Zip/Postal Code"
+  },
+  {
+   "fieldname": "section_break_contractor",
+   "fieldtype": "Section Break",
+   "label": "Contractor Information"
+  },
+  {
+   "fieldname": "contractor_name",
+   "fieldtype": "Data",
+   "label": "Contractor Name"
+  },
+  {
+   "fieldname": "contractor_email_address",
+   "fieldtype": "Data",
+   "label": "Contractor Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "contractor_phone_number",
+   "fieldtype": "Data",
+   "label": "Contractor Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "column_break_contractor",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "contractor_street",
+   "fieldtype": "Data",
+   "label": "Contractor Street"
+  },
+  {
+   "fieldname": "contractor_city",
+   "fieldtype": "Data",
+   "label": "Contractor City"
+  },
+  {
+   "fieldname": "contractor_state",
+   "fieldtype": "Data",
+   "label": "Contractor State/Province"
+  },
+  {
+   "fieldname": "contractor_country",
+   "fieldtype": "Data",
+   "label": "Contractor Country"
+  },
+  {
+   "fieldname": "contractor_zipcode",
+   "fieldtype": "Data",
+   "label": "Contractor Zip/Postal Code"
+  },
+  {
+   "fieldname": "section_break_result",
+   "fieldtype": "Section Break",
+   "label": "Processing Result"
+  },
+  {
+   "fieldname": "pdf_url",
+   "fieldtype": "Data",
+   "label": "PDF URL",
+   "options": "URL",
+   "read_only": 1,
+   "description": "S3 URL of warranty certificate PDF after processing"
+  },
+  {
+   "fieldname": "error_message",
+   "fieldtype": "Small Text",
+   "label": "Error Message",
+   "read_only": 1
+  },
+  {
+   "fieldname": "processed_at",
+   "fieldtype": "Datetime",
+   "label": "Processed At",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-09 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Warranties",
+ "name": "Warranty Registration",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

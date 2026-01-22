@@ -1,0 +1,211 @@
+{
+ "actions": [],
+ "autoname": "naming_series:",
+ "creation": "2024-12-09 12:00:00.000000",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "job_asset_id",
+  "job_number",
+  "brand",
+  "column_break_1",
+  "asset_type",
+  "install_date",
+  "section_break_location",
+  "job_address",
+  "city",
+  "column_break_location",
+  "province",
+  "postal_code",
+  "section_break_equipment",
+  "indoor_model",
+  "indoor_serial",
+  "column_break_equipment",
+  "outdoor_model",
+  "outdoor_serial",
+  "section_break_customer",
+  "customer_first_name",
+  "customer_last_name",
+  "column_break_customer",
+  "customer_email",
+  "customer_phone",
+  "contact_role"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "EQR-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "job_asset_id",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Asset ID",
+   "description": "Unique asset identifier from source system"
+  },
+  {
+   "fieldname": "job_number",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Job Number"
+  },
+  {
+   "fieldname": "brand",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Brand",
+   "options": "HVAC Manufacturer"
+  },
+  {
+   "fieldname": "column_break_1",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "asset_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Asset Type",
+   "options": "\nHVAC\nHeat Pump\nVentilation",
+   "description": "Equipment type: HVAC, Heat Pump, or Ventilation"
+  },
+  {
+   "fieldname": "install_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Install Date"
+  },
+  {
+   "fieldname": "section_break_location",
+   "fieldtype": "Section Break",
+   "label": "Location"
+  },
+  {
+   "fieldname": "job_address",
+   "fieldtype": "Data",
+   "label": "Job Address"
+  },
+  {
+   "fieldname": "city",
+   "fieldtype": "Data",
+   "in_standard_filter": 1,
+   "label": "City"
+  },
+  {
+   "fieldname": "column_break_location",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "province",
+   "fieldtype": "Select",
+   "in_standard_filter": 1,
+   "label": "Province",
+   "options": "\nAB\nBC\nMB\nNB\nNL\nNS\nNT\nNU\nON\nPE\nQC\nSK\nYT"
+  },
+  {
+   "fieldname": "postal_code",
+   "fieldtype": "Data",
+   "label": "Postal Code"
+  },
+  {
+   "fieldname": "section_break_equipment",
+   "fieldtype": "Section Break",
+   "label": "Equipment Details"
+  },
+  {
+   "fieldname": "indoor_model",
+   "fieldtype": "Data",
+   "label": "Indoor Model"
+  },
+  {
+   "fieldname": "indoor_serial",
+   "fieldtype": "Data",
+   "label": "Indoor Serial"
+  },
+  {
+   "fieldname": "column_break_equipment",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "outdoor_model",
+   "fieldtype": "Data",
+   "label": "Outdoor Model"
+  },
+  {
+   "fieldname": "outdoor_serial",
+   "fieldtype": "Data",
+   "label": "Outdoor Serial"
+  },
+  {
+   "fieldname": "section_break_customer",
+   "fieldtype": "Section Break",
+   "label": "Customer Information"
+  },
+  {
+   "fieldname": "customer_first_name",
+   "fieldtype": "Data",
+   "label": "Customer First Name"
+  },
+  {
+   "fieldname": "customer_last_name",
+   "fieldtype": "Data",
+   "label": "Customer Last Name"
+  },
+  {
+   "fieldname": "column_break_customer",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "customer_email",
+   "fieldtype": "Data",
+   "label": "Customer Email",
+   "options": "Email"
+  },
+  {
+   "fieldname": "customer_phone",
+   "fieldtype": "Data",
+   "label": "Customer Phone",
+   "options": "Phone"
+  },
+  {
+   "fieldname": "contact_role",
+   "fieldtype": "Select",
+   "label": "Contact Role",
+   "options": "\nJob Contact\nProperty Owner"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-12-09 12:00:00.000000",
+ "modified_by": "Administrator",
+ "module": "Warranties",
+ "name": "Equipment Registration",
+ "naming_rule": "By \"Naming Series\" field",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "creation",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

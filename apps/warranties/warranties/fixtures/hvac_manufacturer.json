@@ -1,0 +1,211 @@
+[
+ {
+  "brand": "ADP Coils (BC)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.723616",
+  "name": "ADP Coils (BC)",
+  "registration_url": "https://www.adpnow.com/adp-warranty/",
+  "type": "Coil"
+ },
+ {
+  "brand": "American Standard / Ameristar (central)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.782327",
+  "name": "American Standard / Ameristar (central)",
+  "registration_url": "https://www.americanstandardair.com/resources/warranty-and-registration/",
+  "type": "Central Heat Pump"
+ },
+ {
+  "brand": "Arcoaire (ICP)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.789273",
+  "name": "Arcoaire (ICP)",
+  "registration_url": "https://www.tempstar.com/en/us/product-registration-warranty",
+  "type": "Central Heat Pump"
+ },
+ {
+  "brand": "Daikin",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.796126",
+  "name": "Daikin",
+  "registration_url": "https://daikincomfort.com/owner-support/product-registration",
+  "type": "Mini-Split Heat Pump"
+ },
+ {
+  "brand": "Ecobee (thermostats)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.802901",
+  "name": "Ecobee (thermostats)",
+  "registration_url": null,
+  "type": "Thermostat"
+ },
+ {
+  "brand": "Fujitsu",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.809626",
+  "name": "Fujitsu",
+  "registration_url": "https://access.fujitsugeneral.com/Identity/Account/Login",
+  "type": "Mini-Split Heat Pump"
+ },
+ {
+  "brand": "GE (HVAC Partner Program)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.816438",
+  "name": "GE (HVAC Partner Program)",
+  "registration_url": "https://www.geappliancesairandwater.com/hvac-partner-program/",
+  "type": "Central Heat Pump"
+ },
+ {
+  "brand": "Gridless",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.823032",
+  "name": "Gridless",
+  "registration_url": null,
+  "type": "Heat Pump (No Registration)"
+ },
+ {
+  "brand": "Honeywell (thermostats)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.829640",
+  "name": "Honeywell (thermostats)",
+  "registration_url": null,
+  "type": "Thermostat"
+ },
+ {
+  "brand": "KeepRite (ICP)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.836166",
+  "name": "KeepRite (ICP)",
+  "registration_url": "https://www.keeprite.com/en/us/product-registration-warranty",
+  "type": "Central Heat Pump"
+ },
+ {
+  "brand": "LG",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.842855",
+  "name": "LG",
+  "registration_url": "https://cew.lgca-repair.com/register",
+  "type": "Mini-Split Heat Pump"
+ },
+ {
+  "brand": "Midea (Canada)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.849525",
+  "name": "Midea (Canada)",
+  "registration_url": "https://www.midea.com/ca/support/product-registration",
+  "type": "Central Heat Pump"
+ },
+ {
+  "brand": "Mitsubishi (Mesca)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.856093",
+  "name": "Mitsubishi (Mesca)",
+  "registration_url": "https://www.mescacentral.ca/dashboard",
+  "type": "Mini-Split Heat Pump"
+ },
+ {
+  "brand": "Napoleon (HVAC)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.862679",
+  "name": "Napoleon (HVAC)",
+  "registration_url": "https://www.napoleon.com/en/ca/heating-cooling/support/product-registration-hvac",
+  "type": "Central Heat Pump"
+ },
+ {
+  "brand": "Panasonic (heat pumps)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.869423",
+  "name": "Panasonic (heat pumps)",
+  "registration_url": null,
+  "type": "Mini-Split Heat Pump"
+ },
+ {
+  "brand": "Samsung HVAC (commercial & new build)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.875913",
+  "name": "Samsung HVAC (commercial & new build)",
+  "registration_url": "http://e-qsc.com/QWANIX_B2B_Contractor/publish.htm",
+  "type": "Mini-Split / VRF (Commercial)"
+ },
+ {
+  "brand": "Samsung HVAC (retrofit)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.882659",
+  "name": "Samsung HVAC (retrofit)",
+  "registration_url": "https://www.samsunghvac.com/register-product",
+  "type": "Mini-Split Heat Pump"
+ },
+ {
+  "brand": "Tempstar (ICP)",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.889149",
+  "name": "Tempstar (ICP)",
+  "registration_url": "https://www.tempstar.com/en/us/product-registration-warranty",
+  "type": "Central Heat Pump"
+ },
+ {
+  "brand": "TOSOT",
+  "docstatus": 0,
+  "doctype": "HVAC Manufacturer",
+  "fields_needed": [],
+  "markdown_guide": null,
+  "modified": "2025-12-11 06:25:26.895522",
+  "name": "TOSOT",
+  "registration_url": null,
+  "type": "Mini-Split Heat Pump"
+ }
+]

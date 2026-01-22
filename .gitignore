@@ -15,7 +15,7 @@ build/
 env/
 venv/
 
-# Docker
+# Docker logs
 *.log
 
 # IDE
@@ -24,11 +24,10 @@ venv/
 *.swp
 *.swo
 
-# Frappe
+# Frappe site-specific
 sites/*/private/*
 sites/*/public/files/*
 sites/*/logs/*
-*.pyc
 
 # Backup files
 *.backup
@@ -37,10 +36,8 @@ sites/*/logs/*
 *.tmp
 *.tmp.rest
 
-# Data files
-*.json
-!package.json
-!pyproject.toml
+# Test data (not DocType definitions)
+batch_*.json
 
 # Node
 node_modules/
