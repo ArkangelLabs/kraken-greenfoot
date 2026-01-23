@@ -29,7 +29,8 @@ fixtures = [
     {"dt": "Workspace Sidebar", "filters": [["app", "=", "warranties"]]},
     {"dt": "Workspace", "filters": [["module", "=", "Warranties"]]},
     {"dt": "Number Card", "filters": [["module", "=", "Warranties"]]},
-    {"dt": "Dashboard Chart", "filters": [["module", "=", "Warranties"]]}
+    {"dt": "Dashboard Chart", "filters": [["module", "=", "Warranties"]]},
+    {"dt": "Role", "filters": [["name", "=", "Warranties Manager"]]}
 ]
 
 # Use Kraken logo for this app
@@ -39,7 +40,7 @@ app_logo_url = "/assets/kraken_theme/images/kraken-icon.png"
 # ------------------
 
 # include js, css files in header of desk.html
-# app_include_css = "/assets/warranties/css/warranties.css"
+app_include_css = "/assets/warranties/css/warranties.css"
 # app_include_js = "/assets/warranties/js/warranties.js"
 
 # include js, css files in header of web template

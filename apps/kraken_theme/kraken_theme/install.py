@@ -28,11 +28,14 @@ def apply_kraken_branding():
     # Fix navbar dropdown items (runs after sync_standard_items)
     navbar = frappe.get_doc("Navbar Settings")
 
-    # DELETE all Help dropdown items (hides the Help button entirely)
-    navbar.help_dropdown = []
+    # HIDE all Help dropdown items (hides the Help button entirely)
+    for item in navbar.help_dropdown:
+        item.hidden = 1
 
-    # DELETE Toggle Theme from settings dropdown
-    navbar.settings_dropdown = [i for i in navbar.settings_dropdown if i.item_label != "Toggle Theme"]
+    # HIDE Toggle Theme from settings dropdown
+    for item in navbar.settings_dropdown:
+        if item.item_label == "Toggle Theme":
+            item.hidden = 1
 
     navbar.save(ignore_permissions=True)
 
@@ -42,7 +45,37 @@ def apply_kraken_branding():
     except Exception:
         pass  # Ignore deadlock errors on this non-critical update
 
+    # Remove ERPNext UI items (ERPNext is not installed on this site)
+    cleanup_erpnext_items()
+
     frappe.db.commit()
 
     # Clear cache so changes take effect
     frappe.clear_cache()
+
+
+def cleanup_erpnext_items():
+    """Remove ERPNext UI items - ERPNext is not installed on this site"""
+    try:
+        # Delete ERPNext desktop icons
+        frappe.db.sql("""
+            DELETE FROM `tabDesktop Icon` WHERE app = 'erpnext'
+        """)
+
+        # Delete ERPNext workspace sidebar items
+        frappe.db.sql("""
+            DELETE FROM `tabWorkspace Sidebar Item`
+            WHERE parent IN (SELECT name FROM `tabWorkspace Sidebar` WHERE app = 'erpnext')
+        """)
+
+        # Delete ERPNext workspace sidebars
+        frappe.db.sql("""
+            DELETE FROM `tabWorkspace Sidebar` WHERE app = 'erpnext'
+        """)
+
+        # Delete ERPNext workspaces
+        frappe.db.sql("""
+            DELETE FROM `tabWorkspace` WHERE app = 'erpnext'
+        """)
+    except Exception:
+        pass  # Ignore errors if tables don't exist yet

@@ -1,0 +1,33 @@
+[
+ {
+  "app": "warranties",
+  "docstatus": 0,
+  "doctype": "Workspace Sidebar",
+  "for_user": null,
+  "header_icon": "/assets/kraken_theme/images/kraken-icon.png",
+  "items": [
+   {
+    "child": 0,
+    "collapsible": 1,
+    "display_depends_on": null,
+    "filters": null,
+    "icon": null,
+    "indent": 0,
+    "keep_closed": 0,
+    "label": "Home",
+    "link_to": "Warranties",
+    "link_type": "Workspace",
+    "navigate_to_tab": null,
+    "route_options": null,
+    "show_arrow": 0,
+    "type": "Link",
+    "url": null
+   }
+  ],
+  "modified": "2026-01-22 10:02:12.283774",
+  "module": "Warranties",
+  "name": "Warranties",
+  "standard": 0,
+  "title": "Warranties"
+ }
+]

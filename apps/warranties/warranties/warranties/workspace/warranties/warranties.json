@@ -1,24 +1,17 @@
 {
+ "app": "warranties",
  "charts": [
   {
-   "chart_name": "Monthly Installations",
-   "label": "Monthly Installations"
-  },
-  {
-   "chart_name": "Registrations by Brand",
-   "label": "Registrations by Brand"
-  },
-  {
-   "chart_name": "Registrations by Province",
-   "label": "Registrations by Province"
+   "chart_name": "New Warranties",
+   "label": "New Warranties"
   },
   {
    "chart_name": "Warranty Processing Status",
    "label": "Warranty Processing Status"
   }
  ],
- "content": "[{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Total Equipment Registrations\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Pending Warranties\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Completed Warranties\",\"col\":3}},{\"type\":\"number_card\",\"data\":{\"number_card_name\":\"Failed Warranties\",\"col\":3}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Monthly Installations\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Registrations by Brand\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Registrations by Province\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Warranty Processing Status\",\"col\":6}}]",
- "creation": "2024-12-09 12:00:00.000000",
+ "content": "[{\"id\": \"n61ufZRavI\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Total Warranties\", \"col\": 3}}, {\"id\": \"tpCwN6xhTx\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Pending Warranties\", \"col\": 3}}, {\"id\": \"AkWRs9e4t-\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Completed Warranties\", \"col\": 3}}, {\"id\": \"KNNfouMcC5\", \"type\": \"number_card\", \"data\": {\"number_card_name\": \"Failed Warranties\", \"col\": 3}}, {\"id\": \"IQHqUACeO3\", \"type\": \"spacer\", \"data\": {\"col\": 12}}, {\"id\": \"QxxR-APMQu\", \"type\": \"chart\", \"data\": {\"chart_name\": \"New Warranties\", \"col\": 6}}, {\"id\": \"vFUFrBTwUr\", \"type\": \"chart\", \"data\": {\"chart_name\": \"Warranty Processing Status\", \"col\": 6}}]",
+ "creation": "2026-01-22 14:27:24.400471",
  "custom_blocks": [],
  "docstatus": 0,
  "doctype": "Workspace",
@@ -31,33 +24,14 @@
  "links": [
   {
    "hidden": 0,
-   "icon": "clipboard",
+   "icon": "lock",
    "is_query_report": 0,
-   "label": "Equipment",
+   "label": "Brand Credentials",
    "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
-   "dependencies": "",
-   "hidden": 0,
-   "icon": "list",
-   "is_query_report": 0,
-   "label": "Equipment Registration",
-   "link_count": 0,
-   "link_to": "Equipment Registration",
+   "link_to": "Brand Credentials",
    "link_type": "DocType",
-   "onboard": 1,
-   "type": "Link"
-  },
-  {
-   "hidden": 0,
-   "icon": "file",
-   "is_query_report": 0,
-   "label": "Warranty Processing",
-   "link_count": 0,
    "onboard": 0,
-   "type": "Card Break"
+   "type": "Link"
   },
   {
    "dependencies": "",
@@ -84,15 +58,6 @@
    "type": "Link"
   },
   {
-   "hidden": 0,
-   "icon": "setting-gear",
-   "is_query_report": 0,
-   "label": "Configuration",
-   "link_count": 0,
-   "onboard": 0,
-   "type": "Card Break"
-  },
-  {
    "dependencies": "",
    "hidden": 0,
    "icon": "building-2",
@@ -105,14 +70,14 @@
    "type": "Link"
   }
  ],
- "modified": "2024-12-22 15:30:00.000000",
+ "modified": "2026-01-23 08:20:19.984950",
  "modified_by": "Administrator",
  "module": "Warranties",
  "name": "Warranties",
  "number_cards": [
   {
-   "label": "Total Equipment Registrations",
-   "number_card_name": "Total Equipment Registrations"
+   "label": "Total Warranties",
+   "number_card_name": "Total Warranties"
   },
   {
    "label": "Pending Warranties",
@@ -132,8 +97,13 @@
  "public": 1,
  "quick_lists": [],
  "restrict_to_domain": "",
- "roles": [],
+ "roles": [
+  {
+   "role": "Warranties Manager"
+  }
+ ],
  "sequence_id": 1.0,
  "shortcuts": [],
- "title": "Warranties"
+ "title": "Warranties",
+ "type": "Workspace"
 }

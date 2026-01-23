@@ -12,6 +12,7 @@ build/
 # Environment
 .env
 .venv/
+.mcp.json
 env/
 venv/
 
@@ -41,3 +42,5 @@ batch_*.json
 
 # Node
 node_modules/
+lightsail_key.pem
+nul
