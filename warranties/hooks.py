@@ -24,12 +24,10 @@ add_to_apps_screen = [
 
 # Fixtures
 # --------
+# Only include data fixtures - UI elements (Workspace, Dashboard, etc.)
+# are synced from the app's workspace/ folder during migrate
 fixtures = [
     {"dt": "HVAC Manufacturer", "filters": []},
-    {"dt": "Workspace Sidebar", "filters": [["app", "=", "warranties"]]},
-    {"dt": "Workspace", "filters": [["module", "=", "Warranties"]]},
-    {"dt": "Number Card", "filters": [["module", "=", "Warranties"]]},
-    {"dt": "Dashboard Chart", "filters": [["module", "=", "Warranties"]]},
     {"dt": "Role", "filters": [["name", "=", "Warranties Manager"]]}
 ]
 
