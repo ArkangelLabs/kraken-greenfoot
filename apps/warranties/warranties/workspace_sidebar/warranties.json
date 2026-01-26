@@ -8,7 +8,8 @@
  "items": [
   {
    "child": 0,
-   "collapsible": 1,
+   "collapsible": 0,
+   "icon": "home",
    "indent": 0,
    "keep_closed": 0,
    "label": "Home",
@@ -16,9 +17,57 @@
    "link_type": "Workspace",
    "show_arrow": 0,
    "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "file-text",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Warranty Registration",
+   "link_to": "Warranty Registration",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "tool",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Equipment Registration",
+   "link_to": "Equipment Registration",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "activity",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "Agent Log",
+   "link_to": "Agent Log",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
+  },
+  {
+   "child": 0,
+   "collapsible": 1,
+   "icon": "building",
+   "indent": 0,
+   "keep_closed": 0,
+   "label": "HVAC Manufacturer",
+   "link_to": "HVAC Manufacturer",
+   "link_type": "DocType",
+   "show_arrow": 0,
+   "type": "Link"
   }
  ],
- "modified": "2026-01-22 10:02:12.283774",
+ "modified": "2026-01-23 09:42:07.345269",
  "modified_by": "Administrator",
  "module": "Warranties",
  "name": "Warranties",
