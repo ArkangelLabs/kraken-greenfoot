@@ -1,0 +1,42 @@
+{
+  "name": "Kraken Greenfoot Development",
+  "dockerComposeFile": "docker-compose.yml",
+  "service": "frappe",
+  "workspaceFolder": "/workspace",
+  "remoteUser": "frappe",
+  "forwardPorts": [8000, 9000, 3306],
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-python.debugpy",
+        "visualstudioexptteam.vscodeintellicode",
+        "mtxr.sqltools",
+        "mtxr.sqltools-driver-mysql",
+        "esbenp.prettier-vscode",
+        "dbaeumer.vscode-eslint"
+      ],
+      "settings": {
+        "python.defaultInterpreterPath": "/home/frappe/frappe-bench/env/bin/python",
+        "python.formatting.provider": "none",
+        "[python]": {
+          "editor.defaultFormatter": "ms-python.python",
+          "editor.formatOnSave": true
+        },
+        "sqltools.connections": [
+          {
+            "name": "MariaDB",
+            "driver": "MariaDB",
+            "server": "mariadb",
+            "port": 3306,
+            "database": "",
+            "username": "root",
+            "password": "123"
+          }
+        ]
+      }
+    }
+  },
+  "postCreateCommand": "/workspace/.devcontainer/setup.sh",
+  "shutdownAction": "stopCompose"
+}

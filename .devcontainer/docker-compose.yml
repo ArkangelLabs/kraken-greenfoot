@@ -1,0 +1,44 @@
+services:
+  mariadb:
+    image: mariadb:10.6
+    command:
+      - --character-set-server=utf8mb4
+      - --collation-server=utf8mb4_unicode_ci
+      - --skip-character-set-client-handshake
+      - --skip-innodb-read-only-compressed
+    environment:
+      MYSQL_ROOT_PASSWORD: 123
+      MARIADB_ROOT_PASSWORD: 123
+    volumes:
+      - mariadb-data:/var/lib/mysql
+    ports:
+      - "3306:3306"
+
+  redis-cache:
+    image: redis:6.2-alpine
+
+  redis-queue:
+    image: redis:6.2-alpine
+
+  frappe:
+    image: frappe/bench:latest
+    command: sleep infinity
+    environment:
+      SHELL: /bin/bash
+    volumes:
+      # Mount workspace for development files
+      - ..:/workspace:cached
+      # Named volume for frappe-bench (persistent bench installation)
+      - frappe-bench:/home/frappe/frappe-bench
+    working_dir: /workspace
+    ports:
+      - "8000-8005:8000-8005"
+      - "9000-9005:9000-9005"
+    depends_on:
+      - mariadb
+      - redis-cache
+      - redis-queue
+
+volumes:
+  mariadb-data:
+  frappe-bench:
