@@ -28,7 +28,7 @@ add_to_apps_screen = [
 # are synced from the app's workspace/ folder during migrate
 fixtures = [
     {"dt": "HVAC Manufacturer", "filters": []},
-    {"dt": "Role", "filters": [["name", "=", "Warranties Manager"]]}
+    # Role created via after_install
 ]
 
 # Use Kraken logo for this app
@@ -99,7 +99,7 @@ app_include_css = "/assets/warranties/css/warranties.css"
 # ------------
 
 # before_install = "warranties.install.before_install"
-# after_install = "warranties.install.after_install"
+after_install = "warranties.setup.after_install"
 
 # Uninstallation
 # ------------
